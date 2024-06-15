@@ -1,4 +1,4 @@
-# Chirper: Developing a Microblogging Site
+# Chirper: Building a Social Network
 
 ### Backend Technologies
 

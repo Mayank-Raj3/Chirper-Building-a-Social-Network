@@ -1,5 +1,4 @@
 import React from "react";
-import { Inter } from "next/font/google";
 import { GiNestBirds } from "react-icons/gi";
 import { HiOutlineUsers } from "react-icons/hi";
 import {
@@ -12,7 +11,6 @@ import {
 } from "react-icons/bi";
 import FeedCard from "@/components/FeedCard";
 
-const inter = Inter({ subsets: ["latin"] });
 interface chirperSideBar {
   title: string;
   icon: React.ReactNode;
@@ -50,13 +48,13 @@ const sideBarMenuItems: chirperSideBar[] = [
 
 export default function Home() {
   return (
-    <div className={inter.className}>
+    <div>
       <div className="grid grid-cols-12 h-screen w-screen px-56">
-        <div className="col-span-3  pt-8">
+        <div className="col-span-3  pt-1">
           <div className="text-4xl h-fit w-fit hover:bg-slate-600 rounded-full p-1 cursor-pointer transition-all ">
             <GiNestBirds />
           </div>
-          <div className="mt-4 text-2xl  pr-4">
+          <div className="mt-4  text-xl pr-4">
             <ul>
               {sideBarMenuItems.map((items) => (
                 <li
@@ -69,13 +67,26 @@ export default function Home() {
               ))}
             </ul>
             <div className="mt-5 px-3">
-              <button className=" bg-[#1d9bf0] font-semibold text-lg p-4 rounded-full w-full hover:bg-[#3380b4] transition-all">
+              <button className=" bg-[#1d9bf0] font-semibold text-lg py-2 px-4 rounded-full w-full hover:bg-[#3380b4] transition-all">
                 Post
               </button>
             </div>
           </div>
         </div>
-        <div className="col-span-6 border-r-[0.5px] border-l-[0.5px] border-gray-500">
+        <div className="col-span-6 border-r-[1px] border-l-[1px] border-gray-600 h-screen  overflow-scroll">
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
           <FeedCard />
         </div>
         <div className="col-span-3"></div>
